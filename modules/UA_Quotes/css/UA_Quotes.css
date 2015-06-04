@@ -1,0 +1,69 @@
+.quotes-group-content {
+    border-bottom: 1px solid #dddddd;
+    border-top:  1px solid #dddddd;
+}
+
+table.quotes-line-items-table {
+    border-collapse: collapse;
+}
+
+table.quotes-line-items-table td {
+    padding: 3px 7px !important;
+    border: 1px solid #dddddd !important;
+}
+
+table.quotes-line-items-table td input {
+    margin: 0 !important;
+}
+
+table.quotes-line-items-table thead td {
+    background: #dddddd;
+    font-weight: 700 !important;
+}
+
+.quotes-loading {
+    display: none;
+    float: left;
+}
+
+.quotes-button {
+    display: inline-block;
+    float: left;
+}
+
+.quotes-input-qty {
+    width: 50px !important;
+}
+
+.quotes-input-price {
+    width: 100px !important;
+}
+
+.quotes-input-name {
+    width: 250px !important;
+}
+
+.quotea-input-readonly {
+    background: #EEEEEE !important;
+}
+
+#quotes-summary-total table {
+    border-collapse: collapse;
+    width: 500px;
+    float: right;
+    margin-right: 10px;
+}
+
+#quotes-summary-total table tr td {
+    padding: 3px 7px !important;
+    border: 1px solid #dddddd !important;
+    font-weight: 700;
+}
+
+.text-right {
+    text-align: right !important;
+}
+
+.clear {
+    clear: both;
+}
