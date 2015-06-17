@@ -45,3 +45,4 @@ $action_view_map['viewofflineclients'] = 'viewofflineclients';
 $action_view_map['backups'] = 'backups';
 $action_view_map['globalsearchsettings'] = 'globalsearchsettings';
 $action_view_map['languages'] = 'languages';
+$action_view_map['carostore'] = 'carostore';

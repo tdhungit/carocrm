@@ -65,7 +65,7 @@ if (
 'submenu' => ''
 );
 $global_control_links['training'] = array(
-'linkinfo' => array($app_strings['LBL_TRAINING'] => 'javascript:void(window.open(\'http://support.sugarcrm.com\'))'),
+'linkinfo' => array($app_strings['LBL_TRAINING'] => 'javascript:void(window.open(\'http://support.carocrm.com\'))'),
 'submenu' => ''
  );
 
