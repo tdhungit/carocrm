@@ -11,7 +11,16 @@ $dictionary['Contact']['fields']['portal_enable'] = array(
     'type' => 'bool',
     'vname' => 'LBL_PORTAL_ENABLE',
     'massupdate' => false,
-    'reportable'=>false,
+    'reportable' => false,
+);
+
+$dictionary['Contact']['fields']['portal_user'] = array(
+    'name' => 'portal_user',
+    'type' => 'varchar',
+    'len' => 255,
+    'vname' => 'LBL_PORTAL_USER',
+    'massupdate' => false,
+    'reportable' => false,
 );
 
 $dictionary['Contact']['fields']['portal_password'] = array(
@@ -20,7 +29,7 @@ $dictionary['Contact']['fields']['portal_password'] = array(
     'len' => 32,
     'vname' => 'LBL_PORTAL_PASSWORD',
     'massupdate' => false,
-    'reportable'=>false,
+    'reportable' => false,
 );
 
 $dictionary['Contact']['fields']['portal_start_date'] = array(
@@ -28,7 +37,7 @@ $dictionary['Contact']['fields']['portal_start_date'] = array(
     'type' => 'date',
     'vname' => 'LBL_PORTAL_START_DATE',
     'massupdate' => false,
-    'reportable'=>false,
+    'reportable' => false,
 );
 
 $dictionary['Contact']['fields']['portal_expire_date'] = array(
@@ -36,5 +45,11 @@ $dictionary['Contact']['fields']['portal_expire_date'] = array(
     'type' => 'date',
     'vname' => 'LBL_PORTAL_EXPIRE_DATE',
     'massupdate' => false,
-    'reportable'=>false,
+    'reportable' => false,
+);
+
+$dictionary['Contact']['indices'][] = array(
+    'name' => 'idx_portal_user',
+    'type' => 'unique',
+    'fields' => array('portal_user')
 );
