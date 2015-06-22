@@ -90,6 +90,11 @@ $dictionary['ua_quotes_products'] = array(
             'type' => 'double',
             'len' => '12,2',
         ),
+        'rel_module' => array(
+            'name' => 'rel_module',
+            'type' => 'varchar',
+            'len' => '200'
+        )
     ),
     'indices' => array(
         array(
