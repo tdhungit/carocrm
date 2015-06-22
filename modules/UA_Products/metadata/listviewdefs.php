@@ -4,7 +4,7 @@ $listViewDefs [$module_name] =
     array(
         'PRODUCT_IMAGE' =>
             array(
-                'type' => 'ua_photo',
+                'type' => 'photo',
                 'label' => 'LBL_PRODUCT_IMAGE',
                 'width' => '10%',
                 'default' => true,
