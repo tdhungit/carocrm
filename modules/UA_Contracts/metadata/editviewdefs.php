@@ -25,6 +25,7 @@ $viewdefs [$module_name] = array(
                     'panelDefault' => 'expanded',
                 ),
             ),
+            'form' => array('footerTpl' => 'modules/UA_Quotes/tpls/EditViewFooter.tpl'),
         ),
         'panels' => array(
             'default' => array(

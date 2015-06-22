@@ -35,6 +35,8 @@ class UA_Contracts_sugar extends Basic
     var $opportunity_id;
     var $opportunity_name;
     var $contract_value;
+    var $contract_tax;
+    var $contract_after_tax;
     var $currency_id;
     var $expiration_notice;
     var $type;

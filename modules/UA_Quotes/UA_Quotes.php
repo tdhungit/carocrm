@@ -30,7 +30,16 @@ class UA_Quotes extends UA_Quotes_sugar
         $this->total_amount = $result['total'];
         $this->tax = $result['tax'];
 
-        $this->db->query("UPDATE ua_quotes SET net_total_amount = '{$this->net_total_amount}', total_amount = '{$this->total_amount}', tax = '{$this->tax}' WHERE id = '$id'");
+        $this->db->query("
+          UPDATE
+            ua_quotes
+          SET
+            net_total_amount = '{$this->net_total_amount}',
+            total_amount = '{$this->total_amount}',
+            tax = '{$this->tax}'
+          WHERE
+            id = '$id'
+        ");
 
         return $id;
     }
@@ -44,38 +53,7 @@ class UA_Quotes extends UA_Quotes_sugar
      */
     public function Get_Products($id, $is_format)
     {
-        $groups = array();
-
-        $query_group = "SELECT p.* FROM ua_quotes_products p WHERE p.quote_id = '{$id}' AND p.deleted = 0 AND (p.parent_id IS NULL OR p.parent_id = '')";
-        $result_group = $this->db->query($query_group);
-
-        while ($row_group = $this->db->fetchByAssoc($result_group))
-        {
-            if ($is_format)
-            {
-                $row_group['net_total'] = currency_format_number($row_group['net_total'], array('currency_symbol' => false));
-                $row_group['total'] = currency_format_number($row_group['total'], array('currency_symbol' => false));
-            }
-
-            $groups[$row_group['id']] = $row_group;
-
-            $query = "SELECT p.* FROM ua_quotes_products p WHERE p.quote_id = '{$id}' AND p.deleted = 0 AND p.parent_id = '". $row_group['id'] ."'";
-            $result = $this->db->query($query);
-            while ($row = $this->db->fetchByAssoc($result))
-            {
-                if ($is_format)
-                {
-                    $row['qty'] = currency_format_number($row['qty'], array('currency_symbol' => false));
-                    $row['qty_in_stock'] = currency_format_number($row['qty_in_stock'], array('currency_symbol' => false));
-                    $row['unit_price'] = currency_format_number($row['unit_price'], array('currency_symbol' => false));
-                    $row['list_price'] = currency_format_number($row['list_price'], array('currency_symbol' => false));
-                    $row['net_total'] = currency_format_number($row['net_total'], array('currency_symbol' => false));
-                    $row['total'] = currency_format_number($row['total'], array('currency_symbol' => false));
-                }
-                $groups[$row_group['id']]['products'][] = $row;
-            }
-        }
-
-        return $groups;
+        $QP = new UA_QuotesProducts();
+        return $QP->Get_Products($id, $is_format);
     }
 }

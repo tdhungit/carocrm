@@ -10,6 +10,7 @@ $viewdefs [$module_name] = array(
                     2 => 'DELETE',
                     3 => 'FIND_DUPLICATES',
                 ),
+                'footerTpl' => 'modules/UA_Quotes/tpls/DetailViewFooter.tpl',
             ),
             'maxColumns' => '2',
             'widths' => array(

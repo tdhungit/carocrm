@@ -118,4 +118,47 @@ class UA_QuotesProducts extends Basic
             'tax' => $tax
         );
     }
+
+    /**
+     * @param $rel_id
+     * @param $is_format
+     * @param string $rel_module
+     * @return array
+     */
+    public function Get_Products($rel_id, $is_format, $rel_module = 'UA_Quotes')
+    {
+        $groups = array();
+
+        $query_group = "SELECT p.* FROM ua_quotes_products p WHERE p.quote_id = '{$rel_id}' AND p.deleted = 0 AND rel_module = '$rel_module' AND (p.parent_id IS NULL OR p.parent_id = '')";
+        $result_group = $this->db->query($query_group);
+
+        while ($row_group = $this->db->fetchByAssoc($result_group))
+        {
+            if ($is_format)
+            {
+                $row_group['net_total'] = currency_format_number($row_group['net_total'], array('currency_symbol' => false));
+                $row_group['total'] = currency_format_number($row_group['total'], array('currency_symbol' => false));
+            }
+
+            $groups[$row_group['id']] = $row_group;
+
+            $query = "SELECT p.* FROM ua_quotes_products p WHERE p.quote_id = '{$rel_id}' AND p.deleted = 0 AND rel_module = '$rel_module' AND p.parent_id = '". $row_group['id'] ."'";
+            $result = $this->db->query($query);
+            while ($row = $this->db->fetchByAssoc($result))
+            {
+                if ($is_format)
+                {
+                    $row['qty'] = currency_format_number($row['qty'], array('currency_symbol' => false));
+                    $row['qty_in_stock'] = currency_format_number($row['qty_in_stock'], array('currency_symbol' => false));
+                    $row['unit_price'] = currency_format_number($row['unit_price'], array('currency_symbol' => false));
+                    $row['list_price'] = currency_format_number($row['list_price'], array('currency_symbol' => false));
+                    $row['net_total'] = currency_format_number($row['net_total'], array('currency_symbol' => false));
+                    $row['total'] = currency_format_number($row['total'], array('currency_symbol' => false));
+                }
+                $groups[$row_group['id']]['products'][] = $row;
+            }
+        }
+
+        return $groups;
+    }
 } 

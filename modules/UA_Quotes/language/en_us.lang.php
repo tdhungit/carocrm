@@ -58,8 +58,8 @@ $mod_strings = array(
     'LBL_DETAILVIEW_PANEL1' => 'Address Information',
     'LBL_DETAILVIEW_PANEL3' => 'Terms and Conditions',
     'LBL_DETAILVIEW_PANEL4' => 'Description Information',
-    'LBL_LINE_ITEMS' => 'Line Items',
 
+    'LBL_LINE_ITEMS' => 'Line Items',
     'LBL_GROUP_NAME' => 'Group Name',
     'LBL_ADD_GROUP' => 'Add Group',
     'LBL_REMOVE_GROUP' => 'Remove Group',
@@ -74,6 +74,7 @@ $mod_strings = array(
     'LBL_TAX' => 'Tax',
     'LBL_NET_TOTAL' => 'Net Total',
     'LBL_TOTAL' => 'Total',
+
     'LBL_ACTIVITIES_SUBPANEL_TITLE' => 'Activities',
     'LBL_HISOTRY_SUBPANEL_TITLE' => 'Histories',
     'LBL_CONTRACTS_SUBPANEL_TITLE' => 'Contracts',

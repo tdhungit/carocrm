@@ -4,6 +4,7 @@
  * THIS CLASS IS FOR DEVELOPERS TO MAKE CUSTOMIZATIONS IN
  */
 require_once('modules/UA_Contracts/UA_Contracts_sugar.php');
+require_once 'modules/UA_Quotes/UA_QuotesProducts.php';
 
 class UA_Contracts extends UA_Contracts_sugar
 {
@@ -11,6 +12,33 @@ class UA_Contracts extends UA_Contracts_sugar
     public function UA_Contracts()
     {
         parent::UA_Contracts_sugar();
+    }
+
+    public function save()
+    {
+        $id = parent::save();
+
+        $QP = new UA_QuotesProducts();
+        $groups = $_REQUEST['group'];
+
+        $result = $QP->Update_Amount($groups, $id, 'UA_Contracts');
+
+        $this->contract_value = $result['net_total'];
+        $this->contract_after_tax = $result['total'];
+        $this->contract_tax = $result['tax'];
+
+        $this->db->query("
+          UPDATE
+            ua_contracts
+          SET
+            contract_value = '{$this->contract_value}',
+            contract_after_tax = '{$this->contract_after_tax}',
+            contract_tax = '{$this->contract_tax}'
+          WHERE
+            id = '$id'
+        ");
+
+        return $id;
     }
 
     /**
@@ -54,6 +82,17 @@ KGB;
 CIA;
         $query .= $query_array['where'];
         return $query;
+    }
+
+    /**
+     * @param $id
+     * @param $is_format
+     * @return array
+     */
+    public function Get_Products($id, $is_format)
+    {
+        $QP = new UA_QuotesProducts();
+        return $QP->Get_Products($id, $is_format, 'UA_Contracts');
     }
 
 }

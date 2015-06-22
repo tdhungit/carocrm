@@ -165,6 +165,38 @@ $dictionary['UA_Contracts'] = array(
                 'enable_range_search' => false,
                 'precision' => 6,
             ),
+        'contract_tax' =>
+            array(
+                'name' => 'contract_tax',
+                'vname' => 'LBL_CONTRACT_TAX',
+                'type' => 'currency',
+                'len' => 26,
+                'size' => '20',
+                'massupdate' => 0,
+                'no_default' => false,
+                'required' => false,
+                'audited' => false,
+                'reportable' => true,
+                'unified_search' => false,
+                'enable_range_search' => false,
+                'precision' => 6,
+            ),
+        'contract_after_tax' =>
+            array(
+                'name' => 'contract_after_tax',
+                'vname' => 'LBL_CONTRACT_AFTER_TAX',
+                'type' => 'currency',
+                'len' => 26,
+                'size' => '20',
+                'massupdate' => 0,
+                'no_default' => false,
+                'required' => false,
+                'audited' => false,
+                'reportable' => true,
+                'unified_search' => false,
+                'enable_range_search' => false,
+                'precision' => 6,
+            ),
         'currency_id' =>
             array(
                 'required' => false,
