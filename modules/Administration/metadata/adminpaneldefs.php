@@ -156,6 +156,11 @@ $admin_option_defs = array();
 $admin_option_defs['Bugs']['bug_tracker'] = array('Releases', 'LBL_MANAGE_RELEASES', 'LBL_RELEASE', './index.php?module=Releases&action=index');
 $admin_group_header[] = array('LBL_BUG_TITLE', '', false, $admin_option_defs, 'LBL_BUG_DESC');
 
+// sale module
+$admin_option_defs = array();
+$admin_option_defs['Sales']['contract_config'] = array('Administration', 'LBL_SALE_CONTRACT_CONFIG', 'LBL_SALE_CONTRACT_CONFIG', './index.php?module=Administration&action=ContractConfig');
+$admin_group_header[] = array('LBL_SALE_MODULE_TITLE', '', false, $admin_option_defs, 'LBL_SALE_MODULE_DESC');
+
 
 if (file_exists('custom/modules/Administration/Ext/Administration/administration.ext.php')) {
     include('custom/modules/Administration/Ext/Administration/administration.ext.php');

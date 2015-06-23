@@ -1177,5 +1177,8 @@ $mod_strings = array(
     'LBL_REMOVED_FILES' => 'Removed files',
     'LBL_CARO_STORE_TITLE' => 'Caro Store',
     'LBL_CARO_STORE' => 'Caro Store',
+    'LBL_SALE_MODULE_TITLE' => 'Sale Module',
+    'LBL_SALE_MODULE_DESC' => 'Sale Module Config',
+    'LBL_SALE_CONTRACT_CONFIG' => 'Config Contract Module',
 );
 
