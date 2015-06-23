@@ -1,5 +1,5 @@
 <link href="modules/UA_Quotes/css/UA_Quotes.css" rel="stylesheet" type="text/css" />
-<div class="detail view detail508 expanded">
+<div class="detail view detail508 expanded" id="detailpanel_item">
     <h4 style="padding: 0 10px;">{$MOD.LBL_LINE_ITEMS}</h4>
 
     <div style="padding: 10px;" id="quotes-line-items">

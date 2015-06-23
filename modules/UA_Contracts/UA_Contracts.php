@@ -18,25 +18,29 @@ class UA_Contracts extends UA_Contracts_sugar
     {
         $id = parent::save();
 
-        $QP = new UA_QuotesProducts();
-        $groups = $_REQUEST['group'];
+        global $sugar_config;
 
-        $result = $QP->Update_Amount($groups, $id, 'UA_Contracts');
+        if ($sugar_config['disable_contract_line_items'] == '0') {
+            $QP = new UA_QuotesProducts();
+            $groups = $_REQUEST['group'];
 
-        $this->contract_value = $result['net_total'];
-        $this->contract_after_tax = $result['total'];
-        $this->contract_tax = $result['tax'];
+            $result = $QP->Update_Amount($groups, $id, 'UA_Contracts');
 
-        $this->db->query("
-          UPDATE
-            ua_contracts
-          SET
-            contract_value = '{$this->contract_value}',
-            contract_after_tax = '{$this->contract_after_tax}',
-            contract_tax = '{$this->contract_tax}'
-          WHERE
-            id = '$id'
-        ");
+            $this->contract_value = $result['net_total'];
+            $this->contract_after_tax = $result['total'];
+            $this->contract_tax = $result['tax'];
+
+            $this->db->query("
+              UPDATE
+                ua_contracts
+              SET
+                contract_value = '{$this->contract_value}',
+                contract_after_tax = '{$this->contract_after_tax}',
+                contract_tax = '{$this->contract_tax}'
+              WHERE
+                id = '$id'
+            ");
+        }
 
         return $id;
     }

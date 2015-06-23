@@ -30,7 +30,7 @@ class CaroWebServiceImplCS extends SugarWebServiceImplv4_1
         }
 
         global $db;
-        $result = $db->query("SELECT id FROM contacts WHERE portal_user = '$email' AND portal_password = '$password'");
+        $result = $db->query("SELECT * FROM contacts WHERE portal_user = '$email' AND portal_password = '$password'");
         $row = $db->fetchByAssoc($result);
 
         if (empty($row)) {
@@ -41,8 +41,9 @@ class CaroWebServiceImplCS extends SugarWebServiceImplv4_1
             return self::$helperObject->caro_error_message(-2);
         }
 
-        $now = data('Y-m-d');
-        if ($now >= $row['portal_start_date'] && $row <= $row['portal_expire_date']) {
+        $now = time();
+        if ($now >= strtotime($row['portal_start_date'])
+            && $now <= strtotime($row['portal_expire_date'])) {
             return self::$helperObject->caro_response($row);
         }
 

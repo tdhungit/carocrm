@@ -21,11 +21,17 @@ class UA_ContractsViewDetail extends ViewDetail
 
     public function display()
     {
+        global $sugar_config;
+
         $groups = $this->bean->Get_Products($this->bean->id, true);
         $this->ss->assign('GROUPS', $groups);
 
         $this->ss->assign('NET_TOTAL', currency_format_number($this->bean->contract_value));
         $this->ss->assign('TOTAL', currency_format_number($this->bean->contract_after_tax));
+
+        if ($sugar_config['disable_contract_line_items'] == '1') {
+            echo '<style>#detailpanel_item {display: none}</style>';
+        }
 
         parent::display();
     }

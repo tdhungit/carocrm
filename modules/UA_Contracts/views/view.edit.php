@@ -19,6 +19,7 @@ class UA_ContractsViewEdit extends ViewEdit
 
     public function display()
     {
+        global $sugar_config;
         global $locale;
         global $current_user;
 
@@ -37,6 +38,10 @@ class UA_ContractsViewEdit extends ViewEdit
 
         $this->ss->assign('NET_TOTAL', currency_format_number($this->bean->contract_value));
         $this->ss->assign('TOTAL', currency_format_number($this->bean->contract_after_tax));
+
+        if ($sugar_config['disable_contract_line_items'] == '1') {
+            echo '<style>#detailpanel_item {display: none}</style>';
+        }
 
         parent::display();
     }
