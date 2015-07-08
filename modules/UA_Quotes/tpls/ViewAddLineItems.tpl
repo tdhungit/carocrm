@@ -40,9 +40,7 @@
         <td><input type="text" name="group[{$group_row}][products][{$product_row}][discount]" value="0" id="discount_{$group_row}_{$product_row}" class="quotes-input-qty" /></td>
         <td>
             <select name="group[{$group_row}][products][{$product_row}][tax]" id="tax_{$group_row}_{$product_row}">
-                <option value="0">0%</option>
-                <option value="5">5%</option>
-                <option value="10">10%</option>
+                {html_options options=$tax selected=""}
             </select>
         </td>
         <td><input type="text" id="net_total_{$group_row}_{$product_row}" class="net_total_line_{$group_row} quotes-input-price quotea-input-readonly" readonly="readonly" /></td>
@@ -66,9 +64,7 @@
             <td><input type="text" name="group[{$group_row}][products][{$product_row}][discount]" value="0" id="discount_{$group_row}_{$product_row}" class="quotes-input-qty" /></td>
             <td>
                 <select name="group[{$group_row}][products][{$product_row}][tax]" id="tax_{$group_row}_{$product_row}">
-                    <option value="0">0%</option>
-                    <option value="5">5%</option>
-                    <option value="10">10%</option>
+                    {html_options options=$tax selected=""}
                 </select>
             </td>
             <td><input type="text" id="net_total_{$group_row}_{$product_row}" class="net_total_line_{$group_row} quotes-input-price quotea-input-readonly" readonly="readonly" /></td>

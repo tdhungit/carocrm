@@ -5030,3 +5030,11 @@ function assignConcatenatedValue(SugarBean $bean, $fieldDef, $value)
     }
 }
 
+function caro_format_number($value, $decimals = 2)
+{
+    $value = number_format($value, $decimals);
+    $value = trim($value, '0');
+    $value = trim($value, '.');
+    $value = trim($value, ',');
+    return $value;
+}
