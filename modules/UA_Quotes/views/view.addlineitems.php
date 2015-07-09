@@ -37,7 +37,6 @@ class ViewAddLineItems extends SugarView
         while ($row = $this->bean->db->fetchByAssoc($result)) {
             $tax[$row['percent']] = caro_format_number($row['percent']) . '%';
         }
-        print_r($tax);
 
         $this->ss->assign('is_group', $is_group);
         $this->ss->assign('is_product', $is_product);
