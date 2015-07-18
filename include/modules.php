@@ -307,6 +307,10 @@ $beanList['Caro_Tax'] = 'Caro_Tax';
 $beanFiles['Caro_Tax'] = 'modules/Caro_Tax/Caro_Tax.php';
 $moduleList[] = 'Caro_Tax';
 
+$beanList['Caro_ExportTemplates'] = 'Caro_ExportTemplates';
+$beanFiles['Caro_ExportTemplates'] = 'modules/Caro_ExportTemplates/Caro_ExportTemplates.php';
+$moduleList[] = 'Caro_ExportTemplates';
+
 if (file_exists('include/modules_override.php')) {
     include('include/modules_override.php');
 }

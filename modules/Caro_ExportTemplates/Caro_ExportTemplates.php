@@ -1,17 +1,17 @@
 <?php
-
 /**
  * Created by Carobiz.
- * User: Jacky
- * Date: 6/29/2015
- * Time: 4:48 PM
+ * User: jacky
+ * Date: 7/9/2015
+ * Time: 4:15 PM
  */
-class Caro_Tax extends Basic
+
+class Caro_ExportTemplates extends Basic
 {
     var $new_schema = true;
-    var $module_dir = 'Caro_Tax';
-    var $object_name = 'Caro_Tax';
-    var $table_name = 'caro_tax';
+    var $module_dir = 'Caro_ExportTemplates';
+    var $object_name = 'Caro_ExportTemplates';
+    var $table_name = 'caro_exporttempalte';
     var $importable = false;
     var $disable_row_level_security = true;
 
@@ -30,11 +30,12 @@ class Caro_Tax extends Basic
     var $assigned_user_id;
     var $assigned_user_name;
     var $assigned_user_link;
+    var $file_template;
+    var $apply_module;
     var $status;
-    var $percent;
     var $weight;
 
-    public function Caro_Tax()
+    public function Caro_ExportTemplates()
     {
         parent::Basic();
     }

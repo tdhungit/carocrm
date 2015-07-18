@@ -1,24 +1,22 @@
 <?php
 /**
- * Created by Carobiz.
- * User: Jacky
- * Date: 6/29/2015
- * Time: 5:07 PM
+ * Created by jacky.
+ * User: jacky
+ * Date: 7/18/2015
+ * Time: 11:08 AM
  */
 
-$listViewDefs['Caro_Tax'] = array(
+$listViewDefs['Caro_ExportTemplates'] = array(
     'NAME' => array(
-        'width' => '15%',
+        'width' => '20',
         'label' => 'LBL_NAME',
         'link' => true,
-        'sortable' => false,
         'default' => true
     ),
-    'PERCENT' => array(
-        'width' => '15%',
-        'label' => 'LBL_PERCENT',
+    'APPLY_MODULE' => array(
+        'width' => '20',
+        'label' => 'LBL_APPLY_MODULE',
         'link' => false,
-        'sortable' => false,
         'default' => true
     ),
     'STATUS' => array(
@@ -34,5 +32,15 @@ $listViewDefs['Caro_Tax'] = array(
         'link' => false,
         'sortable' => false,
         'default' => true
-    )
+    ),
+    'DATE_MODIFIED' => array(
+        'width' => '10',
+        'default' => true,
+        'label' => 'LBL_DATE_MODIFIED'
+    ),
+    'DATE_ENTERED' => array(
+        'width' => '10',
+        'label' => 'LBL_DATE_ENTERED',
+        'default' => true
+    ),
 );

@@ -107,6 +107,7 @@ $app_list_strings = array(
             'OAuthKeys' => 'OAuth Consumer Keys',
             'OAuthTokens' => 'OAuth Tokens',
             'Caro_Tax' => 'Tax',
+            'Caro_ExportTemplates' => 'Export Templates',
         ),
 
     'moduleListSingular' =>
@@ -146,6 +147,16 @@ $app_list_strings = array(
         '' => '',
         '1' => 'Yes',
         '2' => 'No',
+    ),
+
+    'tax_status_list' => array(
+        'Active' => 'Active',
+        'Inactive' => 'Inactive'
+    ),
+
+    'exporttemplate_status_list' => array(
+        'Active' => 'Active',
+        'Inactive' => 'Inactive'
     ),
 
     //e.g. en franï¿½ais 'Analyst'=>'Analyste',
