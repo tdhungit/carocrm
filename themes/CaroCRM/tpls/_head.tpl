@@ -43,6 +43,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
 <title>{$APP.LBL_BROWSER_TITLE}</title>
 {$SUGAR_CSS}
+<link href="themes/CaroCRM/css/third_party.css" media="all" rel="stylesheet" type="text/css" />
 {$SUGAR_JS}
 {literal}
 <script type="text/javascript">
