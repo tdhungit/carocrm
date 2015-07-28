@@ -7,8 +7,9 @@ $viewdefs [$module_name] = array(
                 'buttons' => array(
                     0 => 'EDIT',
                     1 => 'DUPLICATE',
-                    2 => 'DELETE',
-                    3 => 'FIND_DUPLICATES',
+                    2 => 'CARO_EXPORT',
+                    3 => 'DELETE',
+                    4 => 'FIND_DUPLICATES',
                 ),
                 'footerTpl' => 'modules/UA_Quotes/tpls/DetailViewFooter.tpl',
             ),
