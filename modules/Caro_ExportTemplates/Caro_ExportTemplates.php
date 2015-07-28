@@ -11,7 +11,7 @@ class Caro_ExportTemplates extends Basic
     var $new_schema = true;
     var $module_dir = 'Caro_ExportTemplates';
     var $object_name = 'Caro_ExportTemplates';
-    var $table_name = 'caro_exporttempalte';
+    var $table_name = 'caro_exporttemplates';
     var $importable = false;
     var $disable_row_level_security = true;
 

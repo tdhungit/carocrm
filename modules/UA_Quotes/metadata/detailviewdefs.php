@@ -7,6 +7,7 @@ $viewdefs [$module_name] = array(
                 'closeFormBeforeCustomButtons' => true,
                 'buttons' => array(
                     'EDIT',
+                    'CARO_EXPORT',
                     'DELETE',
                     array('customCode' => '
                         <form action="index.php" method="get" name="FormExport" id="form">
@@ -15,7 +16,7 @@ $viewdefs [$module_name] = array(
                             <input type="hidden" name="action" value="Export" />
                             <input type="hidden" name="type" value="docx" />
                             <input type="hidden" name="to_pdf" value="true" />
-                            <input title="{$APP.LBL_EXPORT}" accessKey="{$APP.LBL_EXPORT}" class="button" type="submit" name="button" value="{$APP.LBL_EXPORT}" />
+                            <input title="{$APP.LBL_EXPORT}" accessKey="{$APP.LBL_EXPORT}" class="button" type="submit" name="button" value="{$APP.LBL_EXPORT}" style="margin-right: 3px;" />
                         </form>'
                     ),
                 ),
