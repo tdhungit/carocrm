@@ -5,6 +5,9 @@ function caro_export_template(module, record) {
 
     $.get('index.php?module=Caro_ExportTemplates&action=ListTemplates&apply_module=' + module + '&record=' + record, function(html) {
         $('#caro_export_template_content').html(html);
-        $('#caro_export_template_content').dialog();
+        $('#caro_export_template_content').dialog({
+            width: 600,
+            modal: true
+        });
     });
 }

@@ -30,9 +30,9 @@ class Caro_ExportTemplatesController extends SugarController
 
         $result = $this->bean->db->query($query);
 
-        echo '<ul>';
+        echo '<ul style="margin:0;padding:0 0 0 17px;">';
         while ($row = $this->bean->db->fetchByAssoc($result)) {
-            echo '<li><a href="index.php?module='. $_REQUEST['apply_module'] .'&action=CaroExport&record='. $_REQUEST['record'] .'&template='. $row['id'] .'">'. $row['name'] .'</a></li>';
+            echo '<li style="margin:0;padding:5px 0;list-style-type:circle;"><a href="index.php?module='. $_REQUEST['apply_module'] .'&action=CaroExport&record='. $_REQUEST['record'] .'&template='. $row['id'] .'">'. $row['name'] .'</a></li>';
         }
         echo '</ul>';
 
