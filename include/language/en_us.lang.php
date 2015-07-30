@@ -3299,4 +3299,8 @@ $app_strings ['documentation'] = array(
     'PRO' => '04_Sugar_Professional',
     'COM' => '05_Sugar_Community_Edition'
 );
-?>
+
+$app_list_strings['export_apply_module_list'] = array(
+    'UA_Contracts' => 'Contracts',
+    'UA_Quotes' => 'Quotes'
+);

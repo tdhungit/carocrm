@@ -6,14 +6,11 @@
  * Time: 10:13 AM
  */
 
-$allow_module = array(
-    'UA_Contracts' => 'Contracts',
-    'UA_Quotes' => 'Quotes'
-);
-
 $smarty = new Sugar_Smarty();
 
-global $app_strings, $mod_strings, $sugar_config;
+global $app_strings, $mod_strings, $sugar_config, $app_list_strings;
+
+$allow_module = $app_list_strings['export_apply_module_list'];
 
 $focus = new Caro_ExportTemplates();
 

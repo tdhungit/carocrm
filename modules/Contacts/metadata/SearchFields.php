@@ -37,11 +37,11 @@ if(!defined('sugarEntry') || !sugarEntry) die('Not A Valid Entry Point');
 
 $searchFields['Contacts'] = 
 	array (
-		'first_name' => array( 'query_type'=>'default'),
+		'first_name' => array('query_type' => 'default'),
 		'last_name'=> array('query_type'=>'default'),
 		'search_name'=> array('query_type'=>'default','db_field'=>array('first_name','last_name'),'force_unifiedsearch'=>true),
 		'account_name'=> array('query_type'=>'default','db_field'=>array('accounts.name')),
-		'lead_source'=> array('query_type'=>'default','operator'=>'=', 'options' => 'lead_source_dom', 'template_var' => 'LEAD_SOURCE_OPTIONS'),
+		'lead_source' => array('query_type' => 'default', 'operator' => '=', 'options' => 'lead_source_dom', 'template_var' => 'LEAD_SOURCE_OPTIONS'),
 		'do_not_call'=> array('query_type'=>'default', 'input_type' => 'checkbox', 'operator'=>'='),
 		'phone'=> array('query_type'=>'default','db_field'=>array('phone_mobile','phone_work','phone_other','phone_fax','assistant_phone')),
 		'email'=> array(

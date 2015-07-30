@@ -21,7 +21,9 @@ $dictionary['Caro_ExportTemplates'] = array(
         'apply_module' => array(
             'name' => 'apply_module',
             'vname' => 'LBL_APPLY_MODULE',
-            'type' => 'varchar',
+            'type' => 'enum',
+            'options' => 'export_apply_module_list',
+            'dbType' => 'varchar',
             'len' => 200,
             'studio' => 'visible',
         ),
