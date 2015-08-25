@@ -35,23 +35,13 @@
  ********************************************************************************/
 
 *}
-{include file="_head.tpl" theme_template=true}
+{include file="./_head.tpl" theme_template=true}
 <body onMouseOut="closeMenus();">
 <a name="top"></a>
 {$DCSCRIPT}
 <div id="header">
-    <div style="height: 35px">
-        {include file="_companyLogo.tpl" theme_template=true}
-        {include file="_globalLinks.tpl" theme_template=true}
-        {include file="_welcome.tpl" theme_template=true}
-        {include file="_headerSearch.tpl" theme_template=true}
-    </div>
-    <div class="clear"></div>
-    {if !$AUTHENTICATED}
-    <br /><br />
-    {/if}
     <div id="ajaxHeader">
-        {include file="_headerModuleList.tpl" theme_template=true}
+        {include file="./_headerModuleList.tpl" theme_template=true}
     </div>
     <div class="clear"></div>
 </div>
@@ -59,6 +49,7 @@
 {literal}
 <iframe id='ajaxUI-history-iframe' src='index.php?entryPoint=getImage&imageName=blank.png'  title='empty' style='display:none'></iframe>
 <input id='ajaxUI-history-field' type='hidden'>
+
 <script type='text/javascript'>
 if (SUGAR.ajaxUI && !SUGAR.ajaxUI.hist_loaded)
 {
@@ -69,7 +60,4 @@ if (SUGAR.ajaxUI && !SUGAR.ajaxUI.hist_loaded)
 }
 </script>
 {/literal}
-
-<div id="main">
-    <div id="content" {if !$AUTHENTICATED}class="noLeftColumn" {/if}>
-        <table style="width:100%"><tr><td>
+{html_main_table authenticate=$AUTHENTICATED}

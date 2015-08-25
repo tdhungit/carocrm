@@ -42,10 +42,8 @@
         <input type="hidden" name="module" value="Home">
         <input type="hidden" name="search_form" value="false">
         <input type="hidden" name="advanced" value="false">
-        <input type="text" name="query_string" id="query_string" size="40" value="{$SEARCH}">
-        <input type="submit" class="button" value="{$APP.LBL_SEARCH}">
-    </form><br />
-    <div id="unified_search_advanced_div"> </div>
+        <input type="text" name="query_string" id="query_string" size="20" placeholder="{$APP.LBL_SEARCH}" value="{$SEARCH}">&nbsp;
+        <input type="submit" class="button" value="">
+    </form>
 </div>
-<span id='sm_holder'></span>
 {/if}

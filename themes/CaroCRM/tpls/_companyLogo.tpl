@@ -37,7 +37,11 @@
 *}
 <div id="companyLogo">
     <a href="index.php?module=Home&action=index" border="0">
-    <img src="{$COMPANY_LOGO_URL}" width="{$COMPANY_LOGO_WIDTH}" height="{$COMPANY_LOGO_HEIGHT}"
-        alt="{sugar_translate label='LBL_COMPANY_LOGO'}" border="0"/>
+        {if $COMPANY_LOGO_URL}
+            <img src="{$COMPANY_LOGO_URL}" width="{$COMPANY_LOGO_WIDTH}" height="{$COMPANY_LOGO_HEIGHT}"
+                alt="{sugar_translate label='LBL_COMPANY_LOGO'}" border="0"/>
+        {else}
+            {sugar_getimage name='CaroCRM_icon' attr='' class='last-view-icon' ext='.png'}
+        {/if}
     </a>
 </div>

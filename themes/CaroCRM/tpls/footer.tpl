@@ -36,35 +36,30 @@
 
 *}
 <!--end body panes-->
-        </td></tr></table>
-    </div>
-    <div class="clear"></div>
-</div>
+{html_footer}
 <div id="bottomLinks">
+    {if $AUTHENTICATED}
+        {$BOTTOMLINKS}
+    {/if}
+</div>
 {if $AUTHENTICATED}
-{$BOTTOMLINKS}
-{/if}
-</div>
 <div id="footer">
-	<div id="responseTime">
-        <p>Supercharged by <a href="http://www.carocrm.com">CaroCRM</a></p>
-    	{$STATISTICS}
-    </div>
-    <div id="copyright">
-        {$COPYRIGHT}
+    <div id="responseTime">
+        <p>Supercharged by <a href="http://www.carocrm.com" target="_blank">CaroCRM</a>. Powered by <a href="http://www.sugarcrm.com" target="_blank">SugarCRM</a></p>
+        {$STATISTICS}
     </div>
 </div>
+{/if}
 <script>
 {literal}
 if(SUGAR.util.isTouchScreen()) {
-        setTimeout(resizeHeader,10000);
+    setTimeout(resizeHeader,10000);
 }
-
 //qe_init function sets listeners to click event on elements of 'quickEdit' class
- if(typeof(DCMenu) !='undefined'){
+if(typeof(DCMenu) !='undefined'){
     DCMenu.qe_refresh = false;
     DCMenu.qe_handle;
- }
+}
 function qe_init(){
 
     //do not process if YUI is undefined
@@ -100,10 +95,7 @@ function qe_init(){
 
     });
 }
-
     qe_init();
-
-
 	SUGAR_callsInProgress++;
 	SUGAR._ajax_hist_loaded = true;
     if(SUGAR.ajaxUI)

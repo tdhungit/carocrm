@@ -145,24 +145,24 @@ textarea {
 	background-color: transparent;
 	}
 	
-.button {
-	border: 1px solid #000000;
-	font-size: 12px;
-	color: #ffffff;
-	background-color: #f15922;
+.button, .acceptButton {
 	font-weight: bold;
+    padding: 0 12px;
+    font-size: 90%;
+    text-decoration: none;
+    height: 23px;
+    line-height: 23px;
+    border: 1px solid #2f88cd;
+    background-color: #2f88cd;
+    background-image: -webkit-gradient(linear, center top, center bottom, from(#2f88cd), to(#2f88cd));
+    font-family: "Helvetica Neue", Helvetica, Arial;
+    color: #FFF;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    display: inline-block;
 	}
 /* custom */
-
-.acceptButton {
-	
-	border: 1px solid #000000;
-	font-size: 12px;
-	color: #ffffff;
-	background-color: #f15922;
-	font-weight: bold;
-	}
-
 table.shell {
 	background-color: #ffffff;
 	width: 700px;
@@ -171,13 +171,13 @@ table.shell {
 	border: 1px solid #111111;
 	}
 table.shell td#help {
-background: #f15922;
+background: #1369B3;
 border-bottom: 1px solid #000000;
 text-align: right;
 padding: 6px 15px;
 font-weight: bold;
 }
-table.shell td a {color: #f15922;}
+table.shell td a {color: #0b578f;}
 
 
 table.shell td#help a:link, table.shell td#help a:visited, table.shell td#help a:hover {color: #eee;}
@@ -257,10 +257,10 @@ border-bottom: 1px  #cccccc;
 	padding: 5px 0px 5px 0px;
 	}
 table.Welcome th {
-	color: #f15922;
+	color: #0b578f;
 	padding: 5px;
 	font-size: 14px;
-    border-top: 2px solid  #f15922;
+    border-top: 2px solid #1369B3;
     border-bottom: 1px solid #dddddd;;
 }
 	
@@ -278,7 +278,7 @@ table.Welcome a:link, a:visited  {
 	font-size: 10px;
 	}
 .stop {
-	color: #f15922;
+	color: #0b578f;
 	text-align: left;
 	}
 .stop a:link, a:visited  {

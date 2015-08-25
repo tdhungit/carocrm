@@ -43,7 +43,6 @@
 <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
 <title>{$APP.LBL_BROWSER_TITLE}</title>
 {$SUGAR_CSS}
-<link href="themes/CaroCRM/css/third_party.css" media="all" rel="stylesheet" type="text/css" />
 {$SUGAR_JS}
 {literal}
 <script type="text/javascript">
@@ -61,3 +60,4 @@ if ( YAHOO.env.ua )
 {/literal}
 <script type="text/javascript" src='{sugar_getjspath file="cache/include/javascript/sugar_field_grp.js"}'></script>
 </head>
+{html_head}

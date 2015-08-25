@@ -32,7 +32,11 @@
  * technical reasons, the Appropriate Legal Notices must display the words
  * "Powered by SugarCRM".
  ********************************************************************************/
-$(document).ready(function(){$("ul.clickMenu").each(function(index,node){$(node).sugarActionMenu();});});YAHOO.util.Event.onAvailable('sitemapLinkSpan',function()
+$(document).ready(function(){
+    $("ul.clickMenu").each(function(index,node){$(node).sugarActionMenu();});
+    var ads_menu = $('#ads-main-menu,#globalLinks').superfish();
+});
+YAHOO.util.Event.onAvailable('sitemapLinkSpan',function()
 {document.getElementById('sitemapLinkSpan').onclick=function()
 {ajaxStatus.showStatus(SUGAR.language.get('app_strings','LBL_LOADING_PAGE'));var smMarkup='';var callback={success:function(r){ajaxStatus.hideStatus();document.getElementById('sm_holder').innerHTML=r.responseText;with(document.getElementById('sitemap').style){display="block";position="absolute";right=0;top=80;}
 document.getElementById('sitemapClose').onclick=function()

@@ -1217,7 +1217,7 @@ p#clear {
 }
 
  .yui-panel-container.shadow {
-    padding: 2px 4px 0 2px;
+    padding: 0;
 }
 
  .yui-panel-container.shadow .underlay {
@@ -6191,30 +6191,9 @@ h2.yui-editor-skipheader,h3.yui-editor-skipheader {
     background-color: transparent !important;
 }
 
-/*
-    //Custom SugarCRM theme
-
-.yui-layout-wrap .yui-navset .yui-content {
-    background:#FFF none repeat scroll 0 0;
-    height : 100%;
+.yui-module.yui-overlay.yui-panel{
+	box-shadow: #444 0px 2px 10px;
+	-moz-box-shadow: #444 0px 2px 10px;
+	-webkit-box-shadow: #444 0px 2px 10px;
+	border-color: #666;
 }
-
-.yui-layout .yui-layout-unit .yui-layout-wrap div.yui-layout-bd {
-    background:#FFF none repeat scroll 0 0;
-}
-
-
-.yui-navset-top ul{
-    background:#DDD url('../../../../index.php?entryPoint=getImage&imageName=sugar-yui-sprites-grey.png') repeat-x scroll 0 0;   
-    border-color:#666666 !important;
-    border-style:solid;
-    border-width:0 0 5px;
-}
-
-.yui-navset-top ul li.selected a, .yui-navset-top ul li.selected a:focus, .yui-navset-top ul li.selected a:hover {
-    background:#666666 url(tabBG.png) repeat-x scroll 0 0 !important;
-}
-
-.yui-navset  {
-    height : 100%;
-}*/
