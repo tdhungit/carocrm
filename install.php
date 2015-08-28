@@ -195,7 +195,7 @@ $next_step = 0;
 
 // use a simple array to map out the steps of the installer page flow
 $workflow = array(  'welcome.php',
-                    'ready.php',
+                    //'ready.php',
                     'license.php',
                     'installType.php',
 );
