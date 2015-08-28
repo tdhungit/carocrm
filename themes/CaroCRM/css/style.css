@@ -4551,3 +4551,14 @@ span.id-ff.multiple{
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
 }
+/* Fixed Email Client */
+.email #settingsTabDiv{
+    padding: 10px;
+}
+.email #settingsDialog table.view{
+    padding: 0;
+    box-shadow: none;
+}
+.email #settingsDialog table.view td, .email #settingsDialog table.view th{
+    padding: 3px 4px;
+}
