@@ -51,12 +51,12 @@ if($suicide) {
 
 
 if (!isset($_POST['confirm']) || !$_POST['confirm']) {
-	include("sugar_version.php"); // provide $sugar_flavor
-       global $sugar_config;
-        $ik = '';
-       if(isset($sugar_config['unique_key']) && !empty($sugar_config['unique_key']) ){
-        $ik = $sugar_config['unique_key'];
-       }
+//	include("sugar_version.php"); // provide $sugar_flavor
+//       global $sugar_config;
+//        $ik = '';
+//       if(isset($sugar_config['unique_key']) && !empty($sugar_config['unique_key']) ){
+//        $ik = $sugar_config['unique_key'];
+//       }
 
 	//$regPhp = file_get_contents("http://www.carocrm.com/product-registration/registration_php.php?edition={$sugar_flavor}&instance_key=".$ik);
 	//changing the reg form. placing in an iframe
@@ -66,9 +66,7 @@ if (!isset($_POST['confirm']) || !$_POST['confirm']) {
 	{$ik}' height='400px' width='700px' frameborder='0' scrolling='no'
 	allowtransparency='true'</iframe>";
 	*/
-    $regPhp="<iframe src='https://www.carocrm.com/product-registration/registration_php_080428.php?edition={$sugar_flavor}&instance_key=
-    {$ik}' height='595px' width='700px' frameborder='0' style='overflow-x:hidden; overflow-y: scroll;'
-    allowtransparency='true'></iframe>";
+    $regPhp="<iframe src='http://www.carocrm.com' height='595px' width='700px' frameborder='0' style='overflow-x:hidden; overflow-y: scroll;' allowtransparency='true'></iframe>";
 
 
 	$notConfirmed =<<<CONF
