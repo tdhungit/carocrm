@@ -11,7 +11,7 @@ class UA_Products_sugar extends Basic
     var $module_dir = 'UA_Products';
     var $object_name = 'UA_Products';
     var $table_name = 'ua_products';
-    var $importable = false;
+    var $importable = true;
     var $disable_row_level_security = true; // to ensure that modules created and deployed under CE will continue to function under team security if the instance is upgraded to PRO
     var $id;
     var $name;
@@ -40,7 +40,7 @@ class UA_Products_sugar extends Basic
     var $currency_id;
     var $usage_unit;
     var $qty_in_stock;
-
+    
     public function UA_Products_sugar()
     {
         parent::Basic();
