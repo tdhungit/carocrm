@@ -102,7 +102,7 @@ if(!$hasUserPreferences){
                                          'forceColumn' => 0,
                                          'fileLocation' => $dashletsFiles['iFrameDashlet']['file'],
                                          'options' => array('titleLabel' => 'LBL_DASHLET_DISCOVER_SUGAR_PRO',
-                                                            'url' => 'https://www.carocrm.com/crm/product/gopro',
+                                                            'url' => 'http://www.carocrm.com/#features',
                                                             'height' => 315,
                                              ));
 
@@ -117,7 +117,7 @@ if(!$hasUserPreferences){
                                          'forceColumn' => 1,
                                          'fileLocation' => $dashletsFiles['iFrameDashlet']['file'],
                                          'options' => array('titleLabel' => 'LBL_DASHLET_SUGAR_NEWS',
-                                                            'url' => 'https://www.carocrm.com/crm/product/news',
+                                                            'url' => 'http://www.carocrm.com/#features',
                                                             'height' => 315,
                                              ));
 
